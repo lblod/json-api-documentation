@@ -3,7 +3,7 @@ services:
   swagger:
     image: swaggerapi/swagger-ui:latest
     environment:
-      - "API_URL=http://localhost/api-doc-data/openapi.json"
+      - "API_URL=/api-doc-data/openapi.json"
       - "PORT=80"
   nginx:
     image: nginx
