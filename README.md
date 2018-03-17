@@ -10,14 +10,10 @@ JSON API documentation on top of the Besluit and Mandaat model and application p
 ```
 docker-compose up
 ```
-
-### Building the documentation
-cf. OpenAPI documentation can be generated using [cl-resources-openapi-generator](https://github.com/mu-semtech/cl-resources-openapi-generator).
-The resulting json should be put in data/nginx/api-doc-data
+Documentation is build automatically on start up.
 
 ### Notes
 This repo uses git-lfs.
 
 
 The stack is built starting from [mu-project](https://github.com/mu-semtech/mu-project).
-
