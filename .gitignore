@@ -10,6 +10,7 @@
 /data/db/virtuoso.pxa
 /data/db/virtuoso.trx
 
+/data/nginx/*
 .DS_Store
 
 admin-app/
