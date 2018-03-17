@@ -1,5 +1,16 @@
 version: '3.4'
 services:
+  open-api-generator:
+    image: semtech/mu-cl-resources-openapi-generator
+    volumes:
+      - ./config/resources:/config
+      - ./data/nginx/api-doc-data:/config/output
+      - ./config/open-api-generator:/config/start-container
+    entrypoint:
+      - bash
+      - "/config/start-container/generate-api-doc.sh"
+    depends_on:
+      - database
   swagger:
     image: swaggerapi/swagger-ui:latest
     environment:
