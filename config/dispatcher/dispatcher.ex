@@ -176,6 +176,24 @@ defmodule Dispatcher do
   match "/publish/*path" do
     Proxy.forward conn, path, "http://notulenimporter/publish/"
   end
+  match "/rechtsgronden/*path" do
+    Proxy.forward conn, path, "http://resource/rechtsgronden/"
+  end
+  match "/vestigingen/*path" do
+    Proxy.forward conn, path, "http://resource/vestigingen/"
+  end
+  match "/contact-punten/*path" do
+    Proxy.forward conn, path, "http://resource/contact-punten/"
+  end
+  match "/posities/*path" do
+    Proxy.forward conn, path, "http://resource/posities/"
+  end
+  match "/rollen/*path" do
+    Proxy.forward conn, path, "http://resource/rollen/"
+  end
+  match "/organisaties/*path" do
+    Proxy.forward conn, path, "http://resource/organisaties/"
+  end
 
   match _ do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
